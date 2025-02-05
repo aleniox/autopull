@@ -55,7 +55,6 @@ def gpu_status():
     return jsonify(get_gpu_info())
 
 if __name__ == '__main__':
-    print(os.getenv('HOST', 'localhost'))
     app.run(
         host=os.getenv('HOST', 'localhost'),
         port=int(os.getenv('PORT', 5048)),
